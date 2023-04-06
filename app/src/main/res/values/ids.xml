@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="disclaimer" type="id" />
+    <item name="service" type="id" />
+    <item name="privacy" type="id" />
+    <item name="scroll" type="id" />
+    <item name="continuTxt" type="id" />
+    <item name="information" type="id" />
+    <item name="ticket" type="id" />
+</resources>

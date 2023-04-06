@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="fragment"
+            type="com.otcengineering.em.views.fragment.GeneralSettingFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <com.mohammedalaa.seekbar.RangeSeekBarView
+            android:layout_marginEnd="60dp"
+            android:layout_marginStart="15dp"
+            android:id="@+id/throttle_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barHeight="7dp"
+            app:baseColor="@color/white"
+            app:circleFillColor="@color/red"
+            app:circleRadius="15dp"
+            app:circleTextColor="@color/white"
+            app:circleTextSize="14dp"
+            app:currentValue="0"
+            app:fillColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_sms"
+            app:maxValue="100"
+            app:minValue="0"
+            app:orientation="LEFT_TO_RIGHT"
+            app:stepValue="1" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins_bold"
+            android:id="@+id/text_sms"
+            android:layout_marginStart="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Throttle range"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_marginEnd="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="%"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="@+id/throttle_range"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_marginStart="5dp"
+            android:id="@+id/info_throttle_range"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@drawable/info3"
+            app:layout_constraintTop_toTopOf="@+id/text_sms"
+            app:layout_constraintStart_toEndOf="@+id/text_sms"/>
+
+        <ImageView
+            android:layout_marginEnd="15dp"
+            android:id="@+id/reset_throttle_range"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/reset3"
+            app:layout_constraintBottom_toBottomOf="@+id/throttle_range"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/throttle_range" />
+
+        <com.mohammedalaa.seekbar.RangeSeekBarView
+            android:layout_marginEnd="60dp"
+            android:layout_marginStart="15dp"
+            android:id="@+id/throttle_dead_zone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barHeight="7dp"
+            app:baseColor="@color/white"
+            app:circleFillColor="@color/red"
+            app:circleRadius="15dp"
+            app:circleTextColor="@color/white"
+            app:circleTextSize="14dp"
+            app:currentValue="0"
+            app:fillColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_dead"
+            app:maxValue="100"
+            app:minValue="0"
+            app:orientation="LEFT_TO_RIGHT"
+            app:stepValue="1" />
+
+        <TextView
+            android:id="@+id/text_dead"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginStart="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Throttle dead zone"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/throttle_range" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="%"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="@+id/throttle_dead_zone"
+            app:layout_constraintTop_toTopOf="@+id/text_dead" />
+
+        <ImageView
+            android:layout_marginStart="5dp"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@drawable/info3"
+            app:layout_constraintTop_toTopOf="@+id/text_dead"
+            app:layout_constraintStart_toEndOf="@+id/text_dead"/>
+
+        <ImageView
+            android:id="@+id/reset_throttle_dead_zone"
+            android:layout_marginEnd="15dp"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/reset3"
+            app:layout_constraintBottom_toBottomOf="@+id/throttle_dead_zone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/throttle_dead_zone" />
+
+        <com.mohammedalaa.seekbar.RangeSeekBarView
+            android:layout_marginEnd="60dp"
+            android:layout_marginStart="15dp"
+            android:id="@+id/brake_force"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barHeight="7dp"
+            app:baseColor="@color/white"
+            app:circleFillColor="@color/red"
+            app:circleRadius="15dp"
+            app:circleTextColor="@color/white"
+            app:circleTextSize="14dp"
+            app:currentValue="0"
+            app:fillColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_brake_force"
+            app:maxValue="100"
+            app:minValue="0"
+            app:orientation="LEFT_TO_RIGHT"
+            app:stepValue="1" />
+
+        <TextView
+            android:layout_marginTop="35dp"
+            android:id="@+id/text_brake_force"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginStart="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Break force"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/throttle_dead_zone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="%"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="@+id/brake_force"
+            app:layout_constraintTop_toTopOf="@+id/text_brake_force" />
+
+        <ImageView
+            android:layout_marginStart="5dp"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@drawable/info3"
+            app:layout_constraintTop_toTopOf="@+id/text_brake_force"
+            app:layout_constraintStart_toEndOf="@+id/text_brake_force"/>
+
+        <ImageView
+            android:id="@+id/reset_brake_force"
+            android:layout_marginEnd="15dp"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/reset3"
+            app:layout_constraintBottom_toBottomOf="@+id/brake_force"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/brake_force" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/reset_settings"
+            android:layout_marginBottom="15dp"
+            android:layout_width="201dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_invite_background"
+            app:layout_constraintBottom_toTopOf="@+id/send"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/reset_setting"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/send"
+            android:layout_marginBottom="15dp"
+            android:layout_width="201dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_invite_background"
+            app:layout_constraintBottom_toTopOf="@+id/save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/send"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/save"
+            android:layout_width="201dp"
+            android:layout_height="34dp"
+            android:layout_marginBottom="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_invite_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/poppins_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/bkg_save"
+            android:layout_width="match_parent"
+            android:background="@color/disabled"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/save_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape_terms"
+            android:backgroundTint="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape_terms"
+                android:orientation="vertical"
+                android:paddingTop="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="Save new settings?"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/yes"
+                        android:layout_width="68dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/button_invite_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Yes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="17dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/no"
+                        android:layout_width="68dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="30dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="No"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="17dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

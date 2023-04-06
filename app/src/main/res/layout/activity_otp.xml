@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/em_explore_the_silence_virgule" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="100"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/signUp"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/img_signup"
+                        android:layout_width="85dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/contour_login"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/text_signup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/sign_up"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/img_signup"
+                        app:layout_constraintEnd_toEndOf="@+id/img_signup"
+                        app:layout_constraintStart_toStartOf="@+id/img_signup"
+                        app:layout_constraintTop_toTopOf="@+id/img_signup" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/image_signup"
+                    android:visibility="invisible"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/triangle_white"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/login"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_login"
+                        android:layout_width="85dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/contour_login"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/text_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/login"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/img_login"
+                        app:layout_constraintEnd_toEndOf="@+id/img_login"
+                        app:layout_constraintStart_toStartOf="@+id/img_login"
+                        app:layout_constraintTop_toTopOf="@+id/img_login" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/image_login"
+                    android:visibility="invisible"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/triangle_white"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/text_sms"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/sms_verification"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/mobile_txt"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/mobile_verification"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_sms" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/resend_sms"
+        android:layout_width="201dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_invite_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobile_txt">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/resend_sms"
+            android:textColor="@color/colorPrimary"
+            android:textAllCaps="false"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/change_phone"-->
+    <!--        android:layout_width="140dp"-->
+    <!--        android:layout_height="30dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:background="@drawable/button_invite_background"-->
+    <!--        android:text="@string/change_phone"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/resend_sms" />-->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/activation_code"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resend_sms" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <EditText
+            android:id="@+id/otp_one_edtxt"
+            style="@style/otp_editxt_numberic_grey_style"
+            android:layout_marginStart="0dp"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/otp_two_edtxt"
+            style="@style/otp_editxt_numberic_grey_style"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/otp_three_edtxt"
+            style="@style/otp_editxt_numberic_grey_style"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/otp_four_edtxt"
+            style="@style/otp_editxt_numberic_grey_style"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/otp_5_edtxt"
+            style="@style/otp_editxt_numberic_grey_style"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/otp_6_edtxt"
+            style="@style/otp_editxt_numberic_grey_style"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/otp_button"
+        android:layout_width="201dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="45dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_invite_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/otp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/continu"
+            android:textAllCaps="false"
+            android:textColor="@color/background_card_2"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loading"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/loading">
+
+        <com.cunoraz.gifview.library.GifView
+            android:id="@+id/gif1"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:gif="@drawable/loading"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

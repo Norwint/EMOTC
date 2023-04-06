@@ -1,0 +1,258 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.otcengineering.otcble",
+    "module": "OtcBle",
+    "version": "2.0.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "OtcBle-2.0.4.aar",
+          "url": "OtcBle-2.0.4.aar",
+          "size": 2970284,
+          "sha512": "07040b28b06140701a9b70b8ecc37cb131f8c74d98339a5f20be700739972dc27234132ac2eab617c58c330ad27cfa6d3c6f71ec0bac5696668aeb3e4b434465",
+          "sha256": "c7bc5ed08ea83ce7d5a6837e958e33b3fac63ffda5c74b73ff6c6b8e635403f2",
+          "sha1": "9fa06e565be5f6ff2f729050731c6c0b6c5e6bc6",
+          "md5": "74e15a3920e0d0f0aacd455bb570141f"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.21"
+          }
+        },
+        {
+          "group": "com.polidea.rxandroidble2",
+          "module": "rxandroidble",
+          "version": {
+            "requires": "1.11.1"
+          }
+        },
+        {
+          "group": "io.reactivex.rxjava3",
+          "module": "rxjava",
+          "version": {
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "4.10.0"
+          }
+        },
+        {
+          "group": "com.google.protobuf",
+          "module": "protobuf-java",
+          "version": {
+            "requires": "3.21.9"
+          }
+        },
+        {
+          "group": "com.annimon",
+          "module": "stream",
+          "version": {
+            "requires": "1.2.2"
+          }
+        },
+        {
+          "group": "com.squareup.retrofit2",
+          "module": "retrofit",
+          "version": {
+            "requires": "2.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.retrofit2",
+          "module": "converter-protobuf",
+          "version": {
+            "requires": "2.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.retrofit2",
+          "module": "converter-gson",
+          "version": {
+            "requires": "2.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.retrofit2",
+          "module": "converter-scalars",
+          "version": {
+            "requires": "2.9.0"
+          }
+        },
+        {
+          "group": "com.github.akarnokd",
+          "module": "rxjava3-retrofit-adapter",
+          "version": {
+            "requires": "3.0.0"
+          }
+        },
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "logging-interceptor",
+          "version": {
+            "requires": "4.9.0"
+          }
+        },
+        {
+          "group": "com.jakewharton.threetenabp",
+          "module": "threetenabp",
+          "version": {
+            "requires": "1.4.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.6.4"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.6.4"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-play-services",
+          "version": {
+            "requires": "1.6.4"
+          }
+        },
+        {
+          "group": "com.google.firebase",
+          "module": "firebase-messaging-ktx",
+          "version": {
+            "requires": "23.1.1"
+          }
+        },
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.9.1"
+          }
+        },
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.9.0"
+          }
+        },
+        {
+          "group": "org.simpleframework",
+          "module": "simple-xml",
+          "version": {
+            "requires": "2.7.1"
+          },
+          "excludes": [
+            {
+              "group": "*",
+              "module": "xpp3"
+            },
+            {
+              "group": "*",
+              "module": "stax-api"
+            },
+            {
+              "group": "*",
+              "module": "stax"
+            }
+          ]
+        },
+        {
+          "group": "com.google.maps.android",
+          "module": "android-maps-utils",
+          "version": {
+            "requires": "2.3.0"
+          }
+        },
+        {
+          "group": "com.google.android.gms",
+          "module": "play-services-maps",
+          "version": {
+            "requires": "18.1.0"
+          }
+        },
+        {
+          "group": "androidx.exifinterface",
+          "module": "exifinterface",
+          "version": {
+            "requires": "1.3.6"
+          }
+        },
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.6.1"
+          }
+        },
+        {
+          "group": "androidx.test",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.5.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "OtcBle-2.0.4.aar",
+          "url": "OtcBle-2.0.4.aar",
+          "size": 2970284,
+          "sha512": "07040b28b06140701a9b70b8ecc37cb131f8c74d98339a5f20be700739972dc27234132ac2eab617c58c330ad27cfa6d3c6f71ec0bac5696668aeb3e4b434465",
+          "sha256": "c7bc5ed08ea83ce7d5a6837e958e33b3fac63ffda5c74b73ff6c6b8e635403f2",
+          "sha1": "9fa06e565be5f6ff2f729050731c6c0b6c5e6bc6",
+          "md5": "74e15a3920e0d0f0aacd455bb570141f"
+        }
+      ]
+    }
+  ]
+}

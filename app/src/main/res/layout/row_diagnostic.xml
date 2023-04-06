@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.otcengineering.em.data.DiagnosticData" />
+
+        <variable
+            name="index"
+            type="int" />
+
+        <variable
+            name="itemClickListener"
+            type="com.otcengineering.em.utils.interfaces.OnClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="33dp"
+            android:layout_height="28dp"
+            android:background="@drawable/image_background_contact"
+            android:src="@{model.image}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dashboard_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@{model.name}"
+            android:textColor="@color/white"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toEndOf="@+id/photo"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

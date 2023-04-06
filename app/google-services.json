@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "979937783455",
+    "project_id": "electricmotion",
+    "storage_bucket": "electricmotion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979937783455:android:d4a7791e3ce7a914b73caa",
+        "android_client_info": {
+          "package_name": "com.otcengineering.em"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979937783455-veass8kpnr7qn7rfvj3rqn6be3qc4ftn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgHeG7SU5k540Z0Xdcw1tLL7UyMdMnwlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979937783455-veass8kpnr7qn7rfvj3rqn6be3qc4ftn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

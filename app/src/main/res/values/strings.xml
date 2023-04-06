@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">EM</string>
+
+    <string name="login">Login</string>
+    <string name="login_mayus">LOGIN</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_mayus">SIGN UP</string>
+    <string name="phone">Phone *</string>
+    <string name="phone_number">Phone</string>
+    <string name="phone_number_register">Mobile Phone number</string>
+    <string name="number">Your mobile phone</string>
+    <string name="otp_number">XXXXXXXXXXXX</string>
+    <string name="continu">Continue</string>
+    <string name="sms_verification">A SMS has been sent with the activation code to the phone number:</string>
+    <string name="scan_qr">Please scan the QR code on the latest page of your quick guide to link your EM bike with your smartphone</string>
+    <string name="enter_qr">Enter the code written below the QR code instead</string>
+    <string name="mobile_verification">%s</string>
+    <string name="accept">Accept</string>
+    <string name="resend_sms">Resend SMS</string>
+    <string name="scan_qr_code">Scan QR code</string>
+    <string name="activation_code">Activation Code:</string>
+    <string name="data_protection">Privacy information protection act</string>
+    <string name="legal">Service agreement</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="privacy_info">Privacy information protection act</string>
+    <string name="accepted">Accepted</string>
+    <string name="my_routes">Tracklog History</string>
+    <string name="my_profile">My profile</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_documents">Documents</string>
+    <string name="my_orders">My Orders</string>
+    <string name="notification_history">Notification History</string>
+    <string name="logout">Log out</string>
+    <string name="error_phone">Phone not found</string>
+    <string name="error">Unexpected error</string>
+    <string name="error_try_again">Error. Please, try again.</string>
+    <string name="error_country">Country not found</string>
+    <string name="error_missing">Phone already exists</string>
+    <string name="save">Save</string>
+    <string name="send">Send</string>
+    <string name="reset_setting">Reset all settings</string>
+    <string name="limitation_active">Active\nLimitation</string>
+    <string name="username">Username:</string>
+    <string name="name">Name:</string>
+    <string name="surname">Surname:</string>
+    <string name="birthday">Birthday Date:</string>
+    <string name="email">Email:</string>
+    <string name="country">Country:</string>
+    <string name="unit_system">Unit system:</string>
+    <string name="information">Information</string>
+    <string name="after_sales">After-sales ticket</string>
+    <string name="send_message">Send your message</string>
+    <string name="ask_question">Ask your question</string>
+    <string name="describe_issue">Describe your issue</string>
+    <string name="send_support">Send support ticket</string>
+
+</resources>

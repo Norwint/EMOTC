@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="fragment"
+            type="com.otcengineering.em.views.fragment.Map2Fragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/set1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.mohammedalaa.seekbar.RangeSeekBarView
+                        android:id="@+id/throttle_reactivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="60dp"
+                        app:barHeight="7dp"
+                        app:baseColor="@color/white"
+                        app:circleFillColor="@color/red"
+                        app:circleRadius="15dp"
+                        app:circleTextColor="@color/white"
+                        app:circleTextSize="14dp"
+                        app:currentValue="0"
+                        app:fillColor="@color/red"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_sms"
+                        app:maxValue="100"
+                        app:minValue="0"
+                        app:orientation="LEFT_TO_RIGHT"
+                        app:stepValue="1" />
+
+                    <TextView
+                        android:id="@+id/text_sms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Throttle reactivity"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="%"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        app:layout_constraintEnd_toEndOf="@+id/throttle_reactivity"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/info_throttle_reactivity"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/info3"
+                        app:layout_constraintStart_toEndOf="@+id/text_sms"
+                        app:layout_constraintTop_toTopOf="@+id/text_sms" />
+
+                    <ImageView
+                        android:id="@+id/reset_throttle_reactivity"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/reset3"
+                        app:layout_constraintBottom_toBottomOf="@+id/throttle_reactivity"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/throttle_reactivity" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/set2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/set1">
+
+                    <com.mohammedalaa.seekbar.RangeSeekBarView
+                        android:id="@+id/power"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="60dp"
+                        app:barHeight="7dp"
+                        app:baseColor="@color/white"
+                        app:circleFillColor="@color/red"
+                        app:circleRadius="15dp"
+                        app:circleTextColor="@color/white"
+                        app:circleTextSize="14dp"
+                        app:currentValue="0"
+                        app:fillColor="@color/red"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_power"
+                        app:maxValue="100"
+                        app:minValue="0"
+                        app:orientation="LEFT_TO_RIGHT"
+                        app:stepValue="1" />
+
+                    <TextView
+                        android:id="@+id/text_power"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Power"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="%"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        app:layout_constraintEnd_toEndOf="@+id/power"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/info_power"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/info3"
+                        app:layout_constraintStart_toEndOf="@+id/text_power"
+                        app:layout_constraintTop_toTopOf="@+id/text_power" />
+
+                    <ImageView
+                        android:id="@+id/reset_power"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/reset3"
+                        app:layout_constraintBottom_toBottomOf="@+id/power"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/power" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/set3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/set2">
+
+                    <com.mohammedalaa.seekbar.RangeSeekBarView
+                        android:id="@+id/rpm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="60dp"
+                        app:barHeight="7dp"
+                        app:baseColor="@color/white"
+                        app:circleFillColor="@color/red"
+                        app:circleRadius="15dp"
+                        app:circleTextColor="@color/white"
+                        app:circleTextSize="14dp"
+                        app:currentValue="0"
+                        app:fillColor="@color/red"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_rpm"
+                        app:maxValue="100"
+                        app:minValue="0"
+                        app:orientation="LEFT_TO_RIGHT"
+                        app:stepValue="1" />
+
+                    <TextView
+                        android:id="@+id/text_rpm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="RPM / Speed"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="%"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"
+                        app:layout_constraintEnd_toEndOf="@+id/rpm"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/info_rpm"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/info3"
+                        app:layout_constraintStart_toEndOf="@+id/text_rpm"
+                        app:layout_constraintTop_toTopOf="@+id/text_rpm" />
+
+                    <ImageView
+                        android:id="@+id/reset_rpm"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/reset3"
+                        app:layout_constraintBottom_toBottomOf="@+id/rpm"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/rpm" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/ausprobe"
+                    android:text="TKO"
+                    android:textColor="@color/disabled"
+                    android:textSize="38dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/set3" />
+
+                <Switch
+                    android:layout_marginStart="15dp"
+                    android:id="@+id/switch_tko"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                    app:layout_constraintStart_toEndOf="@+id/textView3"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/set4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                    <com.mohammedalaa.seekbar.RangeSeekBarView
+                        android:id="@+id/idle_speed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="60dp"
+                        app:barHeight="7dp"
+                        app:baseColor="@color/disabled"
+                        app:circleFillColor="@color/disabled"
+                        app:circleRadius="15dp"
+                        app:circleTextColor="@color/disabled"
+                        app:circleTextSize="14dp"
+                        app:currentValue="0"
+                        app:fillColor="@color/red"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_idle_speed"
+                        app:maxValue="100"
+                        app:minValue="0"
+                        app:orientation="LEFT_TO_RIGHT"
+                        app:stepValue="1" />
+
+                    <TextView
+                        android:id="@+id/text_idle_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Idle speed"
+                        android:textColor="@color/disabled"
+                        android:textSize="17dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/percent1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="%"
+                        android:textColor="@color/disabled"
+                        android:textSize="17dp"
+                        app:layout_constraintEnd_toEndOf="@+id/idle_speed"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/info_idle_speed"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginStart="5dp"
+                        app:tint="@color/disabled"
+                        android:src="@drawable/info3"
+                        app:layout_constraintStart_toEndOf="@+id/text_idle_speed"
+                        app:layout_constraintTop_toTopOf="@+id/text_idle_speed" />
+
+                    <ImageView
+                        android:id="@+id/reset_idle_speed"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginEnd="15dp"
+                        app:tint="@color/disabled"
+                        android:src="@drawable/reset3"
+                        app:layout_constraintBottom_toBottomOf="@+id/idle_speed"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/idle_speed" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/set5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/set4">
+
+                    <com.mohammedalaa.seekbar.RangeSeekBarView
+                        android:id="@+id/idle_torque"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="60dp"
+                        app:barHeight="7dp"
+                        app:baseColor="@color/disabled"
+                        app:circleFillColor="@color/disabled"
+                        app:circleRadius="15dp"
+                        app:circleTextColor="@color/disabled"
+                        app:circleTextSize="14dp"
+                        app:currentValue="0"
+                        app:fillColor="@color/red"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_idle_torque"
+                        app:maxValue="100"
+                        app:minValue="0"
+                        app:orientation="LEFT_TO_RIGHT"
+                        app:stepValue="1" />
+
+                    <TextView
+                        android:id="@+id/text_idle_torque"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Idle torque"
+                        android:textColor="@color/disabled"
+                        android:textSize="17dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/percent2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="%"
+                        android:textColor="@color/disabled"
+                        android:textSize="17dp"
+                        app:layout_constraintEnd_toEndOf="@+id/idle_torque"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/info_idle_torque"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/info3"
+                        app:layout_constraintStart_toEndOf="@+id/text_idle_torque"
+                        app:layout_constraintTop_toTopOf="@+id/text_idle_torque" />
+
+                    <ImageView
+                        android:id="@+id/reset_idle_torque"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginEnd="15dp"
+                        app:tint="@color/disabled"
+                        android:src="@drawable/reset3"
+                        app:layout_constraintBottom_toBottomOf="@+id/idle_torque"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/idle_torque" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/save"
+                    android:layout_width="201dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/button_invite_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/set5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/send"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/bkg_save"
+            android:layout_width="match_parent"
+            android:background="@color/disabled"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/save_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape_terms"
+            android:backgroundTint="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape_terms"
+                android:orientation="vertical"
+                android:paddingTop="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="Save new settings?"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/yes"
+                        android:layout_width="68dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/button_invite_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Yes"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="17dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/no"
+                        android:layout_width="68dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="30dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="No"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="17dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
